@@ -1,1 +1,66 @@
-<h1>lmxz.tk<h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LMXZ_Jump_Page</title>
+    <link rel="stylesheet" type="text/css" href="https://blog.huangwx.cn/css/sweetalert.css">
+<script type="text/javascript" src="https://blog.huangwx.cn/js/sweetalert-dev.js"></script>
+    <style type="text/css">
+        body{
+            background-color: #444;
+            color:white;
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+        }
+        #input,#input_2 {position: absolute;top: 0;left: 0;opacity: 0;z-index: -10;}
+     </style>
+</head>
+<body>
+    <div class="container">
+        <div class="title">
+            <h1>网站跳转<h1>        
+        </div>
+        <p> 由于该网站总是被微信封号，影响正常使用，所以废弃,请在浏览器中输入粘贴元素</p>
+        <br><br>
+        <div class="wrapper1">
+            网址1：聆明小站
+            <p id="text">lmxz.tk</p>
+            <textarea id="input"></textarea>
+            <button onclick="copyText()">copy</button>
+        </div>
+        <br><br>
+        <div class="wrapper1">
+            网站2：聆明小站
+            <p id="text_2">lmxz.ml</p>
+            <textarea id="input_2"></textarea>
+            <button onclick="copyText_2()">copy</button>
+        </div>
+    </div>
+    <script type="text/javascript">
+      
+        function copyText() {
+          var text = document.getElementById("text").innerText;
+          var input = document.getElementById("input");
+          input.value = text; // 修改文本框的内容
+          input.select(); // 选中文本
+          document.execCommand("copy"); // 执行浏览器复制命令
+          swal("网站: "+text+" 已经复制到剪贴板");
+        }
+        function copyText_2() {
+          var text = document.getElementById("text_2").innerText;
+          var input = document.getElementById("input_2");
+          input.value = text; // 修改文本框的内容
+          input.select(); // 选中文本
+          document.execCommand("copy"); // 执行浏览器复制命令
+          swal("网站: "+text+" 已经复制到剪贴板");
+        }
+    </script>
+</body>
+</html>
