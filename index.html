@@ -4,41 +4,63 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Birthday</title>
-    <!-- font awesome cdn link  -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <!-- custom css file link  -->
-    <link rel="stylesheet" href="css/style_b.css">
-    <link rel="stylesheet" href="css/style_nav.css">
-    <link rel="stylesheet" href="css/style_d.css">
-    <link rel="icon" href="https://img.tukuppt.com/ad_preview/00/82/86/LWvLlYHH4r.jpg!/fw/260" sizes="16x16">
+    <title>LMXZ_Jump_Page</title>
+    <link rel="stylesheet" type="text/css" href="https://blog.huangwx.cn/css/sweetalert.css">
+<script type="text/javascript" src="https://blog.huangwx.cn/js/sweetalert-dev.js"></script>
+    <style type="text/css">
+        body{
+            background-color: #444;
+            color:white;
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+        }
+        #input,#input_2 {position: absolute;top: 0;left: 0;opacity: 0;z-index: -10;}
+     </style>
 </head>
 <body>
-
-<!-- header section starts  -->
-
-<!-- header section ends -->
-
-<div class="content">
-   
-
-    <div class="img_con" >
-        <div class="img" id="_3">
-            <canvas id="canvas" ></canvas>
-        </div>      
+    <div class="container">
+        <div class="title">
+            <h1>网站跳转<h1>        
+        </div>
+        <p> 本网站暂时闲置，有需要请通过下面网站访问。</p>
+        <br><br>
+        <div class="wrapper1">
+            网址1：聆明小站
+            <p id="text">lmxz.tk</p>
+            <textarea id="input"></textarea>
+            <button onclick="copyText()">复制网址1</button>
+        </div>
+        <br><br>
+        <div class="wrapper1">
+            网址2：聆明小站
+            <p id="text_2">lmxz.ml</p>
+            <textarea id="input_2"></textarea>
+            <button onclick="copyText_2()">复制网址2</button>
+        </div>
     </div>
-   
-    </div>
-<!-- banner section starts  -->
-
-<!-- custom js file link  -->
-<div class="container">
-<div class="zhufu"><img src="https://pic.imgdb.cn/item/6393d298b1fccdcd36eede56.png"></div>
-</div>
-</div>
-
-<script src="js/script_b.js"></script>
-<script src="js/script_c.js"></script>
-<script src="js/script_all.js"></script>
+    <script type="text/javascript">
+      
+        function copyText() {
+          var text = document.getElementById("text").innerText;
+          var input = document.getElementById("input");
+          input.value = text; // 修改文本框的内容
+          input.select(); // 选中文本
+          document.execCommand("copy"); // 执行浏览器复制命令
+          swal("网站: "+text+" 已经复制到剪贴板");
+        }
+        function copyText_2() {
+          var text = document.getElementById("text_2").innerText;
+          var input = document.getElementById("input_2");
+          input.value = text; // 修改文本框的内容
+          input.select(); // 选中文本
+          document.execCommand("copy"); // 执行浏览器复制命令
+          swal("网站: "+text+" 已经复制到剪贴板");
+        }
+    </script>
 </body>
 </html>
